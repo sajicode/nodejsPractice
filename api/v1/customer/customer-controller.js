@@ -50,7 +50,7 @@ exports.updateCustomer = function(req, res, next) {
     res.status(200).json(data);
 }
 
-exports.deleteStudent = function(req, res, next) {
+exports.deleteCustomer = function(req, res, next) {
     customerModel.remove({_id: req.client._id}, (err, res) => {
         if(err) {
             return next(new Error("customer could not be deleted"));
